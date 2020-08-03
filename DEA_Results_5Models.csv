@@ -1,0 +1,49 @@
+Quarter,Station,Model1,Model2,Model3,Model4,Model5,Status
+1,Bhadrapur,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+2,Bhadrapur,not efficient,not efficient,efficient,not efficient,not efficient,not efficient
+3,Bhadrapur,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+4,Bhadrapur,efficient,not efficient,not efficient,not efficient,not efficient,depends
+5,Bhadrapur,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+6,Bhadrapur,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+7,Bhadrapur,not efficient,not efficient,not efficient,efficient,not efficient,depends
+8,Bhadrapur,efficient,not efficient,efficient,efficient,efficient,depends
+1,Bhairawa,efficient,efficient,efficient,efficient,efficient,efficient
+2,Bhairawa,efficient,efficient,efficient,not efficient,efficient,depends
+3,Bhairawa,efficient,not efficient,efficient,efficient,efficient,depends
+4,Bhairawa,efficient,not efficient,efficient,efficient,efficient,depends
+5,Bhairawa,efficient,not efficient,efficient,efficient,efficient,depends
+6,Bhairawa,efficient,efficient,efficient,efficient,efficient,efficient
+7,Bhairawa,efficient,efficient,efficient,efficient,efficient,efficient
+8,Bhairawa,efficient,efficient,efficient,efficient,efficient,efficient
+1,Biratnagar,efficient,not efficient,efficient,not efficient,efficient,depends
+2,Biratnagar,not efficient,not efficient,efficient,not efficient,not efficient,not efficient
+3,Biratnagar,not efficient,not efficient,efficient,not efficient,not efficient,not efficient
+4,Biratnagar,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+5,Biratnagar,not efficient,not efficient,efficient,not efficient,efficient,depends
+6,Biratnagar,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+7,Biratnagar,not efficient,not efficient,efficient,not efficient,not efficient,not efficient
+8,Biratnagar,not efficient,not efficient,not efficient,efficient,not efficient,depends
+1,Kakarvitta,efficient,efficient,efficient,efficient,efficient,efficient
+2,Kakarvitta,efficient,efficient,efficient,not efficient,efficient,depends
+3,Kakarvitta,not efficient,not efficient,efficient,not efficient,efficient,depends
+4,Kakarvitta,not efficient,not efficient,efficient,not efficient,efficient,depends
+5,Kakarvitta,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+6,Kakarvitta,not efficient,not efficient,efficient,efficient,efficient,depends
+7,Kakarvitta,efficient,efficient,efficient,efficient,efficient,efficient
+8,Kakarvitta,efficient,efficient,efficient,efficient,efficient,efficient
+1,Lahan,efficient,efficient,not efficient,efficient,efficient,efficient
+2,Lahan,efficient,efficient,efficient,not efficient,efficient,depends
+3,Lahan,efficient,not efficient,efficient,not efficient,not efficient,depends
+4,Lahan,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+5,Lahan,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+6,Lahan,not efficient,not efficient,not efficient,not efficient,not efficient,not efficient
+7,Lahan,not efficient,not efficient,not efficient,efficient,not efficient,depends
+8,Lahan,efficient,not efficient,efficient,efficient,efficient,depends
+1,Nepalgunj,efficient,not efficient,efficient,not efficient,efficient,depends
+2,Nepalgunj,not efficient,not efficient,efficient,efficient,efficient,depends
+3,Nepalgunj,efficient,efficient,efficient,not efficient,efficient,depends
+4,Nepalgunj,efficient,not efficient,efficient,efficient,efficient,depends
+5,Nepalgunj,efficient,not efficient,efficient,not efficient,efficient,depends
+6,Nepalgunj,not efficient,not efficient,efficient,efficient,not efficient,depends
+7,Nepalgunj,efficient,not efficient,efficient,efficient,efficient,depends
+8,Nepalgunj,efficient,efficient,efficient,not efficient,efficient,depends
