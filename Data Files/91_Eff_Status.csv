@@ -1,0 +1,92 @@
+﻿Station,Quarters,Efficiency,Value,Status
+Bhadrapur,1,0.9636,0,Not Efficient
+Bhadrapur,2,0.9224,0,Not Efficient
+Bhadrapur,3,0.9091,0,Not Efficient
+Bhadrapur,4,0.9018,0,Not Efficient
+Bhadrapur,5,0.9182,0,Not Efficient
+Bhadrapur,6,0.9273,0,Not Efficient
+Bhadrapur,7,0.9593,0,Not Efficient
+Bhadrapur,8,0.9239,0,Not Efficient
+Bhadrapur,9,0.9166,0,Not Efficient
+Bhadrapur,10,0.9194,0,Not Efficient
+Bhadrapur,11,0.9195,0,Not Efficient
+Bhadrapur,12,0.9625,0,Not Efficient
+Bhadrapur,13,0.9914,1,Efficient
+Bhairawa,1,1,1,Efficient
+Bhairawa,2,0.978,0,Not Efficient
+Bhairawa,3,0.9689,0,Not Efficient
+Bhairawa,4,0.9781,0,Not Efficient
+Bhairawa,5,0.9874,1,Efficient
+Bhairawa,6,0.9901,1,Efficient
+Bhairawa,7,0.9849,1,Efficient
+Bhairawa,8,0.9803,0,Not Efficient
+Bhairawa,9,0.9508,0,Not Efficient
+Bhairawa,10,0.9495,0,Not Efficient
+Bhairawa,11,0.9339,0,Not Efficient
+Bhairawa,12,0.9887,1,Efficient
+Bhairawa,13,1,1,Efficient
+Birgunj,1,0.9894,1,Efficient
+Birgunj,2,0.9695,0,Not Efficient
+Birgunj,3,0.9824,0,Not Efficient
+Birgunj,4,0.9752,0,Not Efficient
+Birgunj,5,0.983,0,Not Efficient
+Birgunj,6,1,1,Efficient
+Birgunj,7,0.9759,0,Not Efficient
+Birgunj,8,0.966,0,Not Efficient
+Birgunj,9,0.9728,0,Not Efficient
+Birgunj,10,0.9928,1,Efficient
+Birgunj,11,0.9772,0,Not Efficient
+Birgunj,12,1,1,Efficient
+Birgunj,13,1,1,Efficient
+Biratnagar,1,0.993,1,Efficient
+Biratnagar,2,0.994,1,Efficient
+Biratnagar,3,1,1,Efficient
+Biratnagar,4,0.9955,1,Efficient
+Biratnagar,5,0.9926,1,Efficient
+Biratnagar,6,0.9855,1,Efficient
+Biratnagar,7,0.9973,1,Efficient
+Biratnagar,8,0.9764,0,Not Efficient
+Biratnagar,9,0.9682,0,Not Efficient
+Biratnagar,10,0.9706,0,Not Efficient
+Biratnagar,11,0.9462,0,Not Efficient
+Biratnagar,12,0.9901,1,Efficient
+Biratnagar,13,1,1,Efficient
+Karkarvitta,1,1,1,Efficient
+Karkarvitta,2,1,1,Efficient
+Karkarvitta,3,1,1,Efficient
+Karkarvitta,4,0.9958,1,Efficient
+Karkarvitta,5,1,1,Efficient
+Karkarvitta,6,0.9986,1,Efficient
+Karkarvitta,7,1,1,Efficient
+Karkarvitta,8,0.9978,1,Efficient
+Karkarvitta,9,1,1,Efficient
+Karkarvitta,10,0.9682,0,Not Efficient
+Karkarvitta,11,0.9353,0,Not Efficient
+Karkarvitta,12,1,1,Efficient
+Karkarvitta,13,1,1,Efficient
+Nepalgunj,1,0.9747,0,Not Efficient
+Nepalgunj,2,0.9428,0,Not Efficient
+Nepalgunj,3,0.9431,0,Not Efficient
+Nepalgunj,4,0.9569,0,Not Efficient
+Nepalgunj,5,0.9466,0,Not Efficient
+Nepalgunj,6,0.9514,0,Not Efficient
+Nepalgunj,7,0.9212,0,Not Efficient
+Nepalgunj,8,0.9557,0,Not Efficient
+Nepalgunj,9,1,1,Efficient
+Nepalgunj,10,1,1,Efficient
+Nepalgunj,11,0.8422,0,Not Efficient
+Nepalgunj,12,0.97,0,Not Efficient
+Nepalgunj,13,0.9913,1,Efficient
+Mahendranagar,1,1,1,Efficient
+Mahendranagar,2,1,1,Efficient
+Mahendranagar,3,0.975,0,Not Efficient
+Mahendranagar,4,0.9491,0,Not Efficient
+Mahendranagar,5,0.9642,0,Not Efficient
+Mahendranagar,6,0.9717,0,Not Efficient
+Mahendranagar,7,0.9737,0,Not Efficient
+Mahendranagar,8,0.9737,0,Not Efficient
+Mahendranagar,9,1,1,Efficient
+Mahendranagar,10,0.9671,0,Not Efficient
+Mahendranagar,11,0.9926,1,Efficient
+Mahendranagar,12,1,1,Efficient
+Mahendranagar,13,1,1,Efficient
