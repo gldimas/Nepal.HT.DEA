@@ -1,0 +1,103 @@
+---
+title: "Final Visualization Code for DEA Model Analysis from Dimas et al.(2021)"
+output: html_notebook
+---
+```{r}
+# Please note as mentioned in the readMe file, we cannot provide the code for Figure 1 per data agreement. 
+```
+
+
+```{r}
+# read in the dependencies 
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+# check the current working directory is reading in the correct files, else change directory as need be
+getwd()
+# set path, we default to the current dir. 
+inputPath<-(getwd())
+setwd(inputPath)
+
+```
+
+```{r}
+
+########## Figure 3: Efficiency, by Station and Quarter, with Respect to the best Practice Frontier###############
+
+# read in the manually edited version of 91_Eff.csv outputted from GitHubFinalModelCodes.Rmd
+station_df <-read.csv('91_Eff_Status.csv',header=TRUE,fileEncoding = 'UTF-8-BOM')
+
+#subset data and set up ggplot
+station_df %>% select(Quarters, Station, Status) %>% ggplot(aes(Quarters,Station, color=Status, shape=Status))-> g1
+
+#set up ggplot and create dot plot graph of station efficiency
+g1 + geom_point(size=7) + scale_shape_manual(values = c(19, 18)) +scale_color_manual(values=c("#FFC20A","#0C7BDC")) + ggtitle("Station Efficiency Breakdown") + scale_x_discrete(name ="Quarter", 
+                   limits=c("1","2","3","4","5","6","7","8", "9","10","11","12","13"))
+
+######################## Figure 4: Cross-Efficiency, by Station, Averaged over Quarters###########################
+
+# read in the manually aggregated file created from 91_CE.csv outputted from GitHubFinalModelCodes.Rmd
+model.rank <- read.csv("91_CE_SummaryValues.csv",fileEncoding = 'UTF-8-BOM')
+
+#set up ggplot and creat dot plot graph of station cross efficiency rankings (average for each station across quarters)
+g10 <- ggplot(model.rank, aes(reorder(Station,CrossEffScore3),CrossEffScore3)) + geom_col(aes(fill = CrossEffScore3)) + scale_fill_gradient(low="#b4ecb4", high="#218321") + coord_flip() + labs(x="Station", y = "Average Efficiency") +  geom_text(aes(x = Station, y = CrossEffScore3 + -0.05, label = round(CrossEffScore3, 3))) +ggtitle("Ranked Average Station Efficiency") + theme(legend.position = "none")
+g10
+
+############Figure 5: Cross-Efficiency by Station, with Boxplots Depicting Distribution over Quarters.##############
+
+# read in the manually edited file created from 91_CE.csv outputted from GitHubFinalModelCodes.Rmd
+station_df_CE <-read.csv('91_CE_Status.csv',header=TRUE)
+#average cross efficiency graph
+g11 <- ggplot(station_df_CE, aes(Station, CrossEffScore1 ))
+
+#creat dot plot graph of station efficiency
+#aes(color = Station)
+g11 + geom_boxplot() + ggtitle("Cross Efficiency Scores Boxplot by Station for Q1-Q13") + scale_y_continuous(name ="Cross Efficiency Score")+theme(text = element_text(size=13),axis.text.x = element_text(angle=45, hjust=1))
+
+```
+
+
+```{r}
+# Here we create Figure 2 used in Dimas et al.(2021)
+library(ggmap)
+library(lubridate)
+library(ggplot2)
+library(dplyr)
+library(data.table)
+library(ggrepel)
+library(tidyverse)
+
+np.cities <- data.frame(state = rep("Nepal", 7), city = c("Kakarvitta", 
+    "Nepalgunj", "Bhairawa", "Biratnagar", "Bhadrapur","Birgunj","Mahendranagar"), lat = c(26.647547, 28.065956, 27.500478, 26.450756, 26.638697,27.0449,28.9873), lng = c(88.156116, 81.636996,  83.459141, 87.275398, 87.990889,84.862,80.1652))
+
+theme_bare <- theme(
+  axis.line = element_blank(), 
+  axis.text.x = element_blank(), 
+  axis.text.y = element_blank(),
+  axis.ticks = element_blank(), 
+  axis.title.x = element_blank(), 
+  axis.title.y = element_blank(),
+  legend.text=element_text(size=7),
+  legend.title=element_text(size=8),
+  panel.background = element_blank(),
+  panel.border = element_rect(colour = "gray", fill=NA, size=0.5)
+)
+#map + 
+#  geom_polygon(fill = "#3B7AAD") + geom_path() + coord_fixed() + guides() +
+#theme_bare 
+# getting the map
+register_google(key = *requires Google Maps API key: see https://cloud.google.com/docs/authentication/api-keys* ) 
+#nepal<-c(lat = 27.700769, lon = 	85.300140)
+mapgilbert <- get_map(center=c(lat = 27, lon =85), zoom = 6, maptype = "terrain")
+# plotting the map with some points on it
+ggmap(mapgilbert) +
+geom_point(aes(x = lng, y = lat, stroke = 1), colour="red", data = np.cities, size =3)+
+geom_label_repel(
+    aes(lng, lat, label = city),
+    data=np.cities,
+    size = 3, 
+    box.padding = 0.6, point.padding = 0.2,
+segment.color = 'black') + theme_bare
+
+```
+

@@ -1,0 +1,72 @@
+---
+title: "Final Code for DEA Model Analysis from Dimas et al.(2021)"
+output: html_notebook
+---
+
+
+```{r}
+#import the dea package we use as well as some other dependencies 
+library(deaR)
+library(tidyverse)
+getwd()
+```
+
+
+```{r}
+# Set the input and output working directories as need be, we set auto to the current dir
+inputPath<-(getwd())
+outputPath<-(getwd())
+# set the input path for reading in the data
+setwd(inputPath)
+#check the current working directory
+getwd()
+data<-read.csv("DEA_Inputs_Outputs_New_TF_91.csv", header=TRUE)
+# Set the output working directory to store in this folder
+setwd(outputPath)
+# check the output path has been updated
+getwd()
+############ The following code created our baseline model as defined in the manuscript #########
+### Inputs: Station Duration, Flow, Staff #
+### Outputs: IRF From Com, #VIFs, # IRFS, Individual VIF from Completeness
+
+#create dea data object with selected inputs and outputs - Model 
+dea_data <- read_data(data, dmus = 1, inputs = c("Test_Scores","Staff..","StaffHoursWorked"), outputs = c("IRF_forms","IRF_Com","VIF_forms","Average_VIF_com_INDV"))
+
+#develop basic dea output oriented, variable returns-to-scale model
+result <- model_basic(dea_data,orientation = "oo",rts = "vrs")
+
+#since this is a output oriented need to take reciprocal to find relative efficiencies
+eff <- efficiencies(result) 
+slack <- slacks(result)# To extract input and output slacks.
+target <- targets(result)# To extract the input and output target values. 
+lambda <- lambdas(result)# To extract the lambdas (or intensities). 
+ref <- references(result)# To extract the reference set for inefficient DMUs. 
+rts <- rts(result)# To extract the returns-to-scale. 
+
+#calculate relevant metrics, rounding to 3 decimals 
+round(1 / eff,3)
+
+#summary of dea model result
+summary(result, exportExcel = F)
+
+results<-cbind(1/(round(eff,4)),round(lambda,4)) ## since this is a output oriented need to take recp.
+
+#write out the efficiency to a csv
+write.csv(results,"91_Eff.csv")
+
+#create crosefficiency object for model 1
+cross <- cross_efficiency(dea_data,
+                          orientation = "oo",
+                          rts = "vrs",
+                          selfapp = TRUE,  
+                          M2 = FALSE,
+                          M3 = FALSE)
+# save the models cross efficiency values 
+model_crossEff <- cross$Arbitrary$cross_eff 
+
+#calculate the efficiency ranking by taking the average of the cross-efficiency values of each station
+avg_eff <- colMeans(1/model_crossEff)
+avg_eff %>% as.data.frame() %>% rownames_to_column("Station") %>% rename(CrossEffScore1 = ".") #%>%
+# output the cross efficiency data to a csv
+write.csv(avg_eff,"91_CE.csv")
+```
